@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="MusicCell" customModule="MusicApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="481" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-gT-3dU">
+                        <rect key="frame" x="16" y="16" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="AdB-wH-suZ"/>
+                            <constraint firstAttribute="width" constant="90" id="kIg-ZY-wdW"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hUo-aN-IES">
+                        <rect key="frame" x="122" y="34.5" width="295" height="53"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccd-x7-apa">
+                                <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-CH-J0t">
+                                <rect key="frame" x="0.0" y="32.5" width="295" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Qx-jA-lSZ">
+                        <rect key="frame" x="433" y="45" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="R0X-D7-QTp"/>
+                            <constraint firstAttribute="width" constant="32" id="gRW-Kv-PPZ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Qx-jA-lSZ" firstAttribute="leading" secondItem="hUo-aN-IES" secondAttribute="trailing" constant="16" id="2cD-eN-4gm"/>
+                    <constraint firstItem="hUo-aN-IES" firstAttribute="centerY" secondItem="hXQ-gT-3dU" secondAttribute="centerY" id="8m1-Z7-zfT"/>
+                    <constraint firstAttribute="trailing" secondItem="5Qx-jA-lSZ" secondAttribute="trailing" constant="16" id="C3A-Xp-uH0"/>
+                    <constraint firstItem="hXQ-gT-3dU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="HnP-w7-Xoc"/>
+                    <constraint firstItem="hXQ-gT-3dU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kK0-C7-H8e"/>
+                    <constraint firstAttribute="bottom" secondItem="hXQ-gT-3dU" secondAttribute="bottom" constant="16" id="laI-oI-2uT"/>
+                    <constraint firstItem="5Qx-jA-lSZ" firstAttribute="centerY" secondItem="hXQ-gT-3dU" secondAttribute="centerY" id="u7p-hr-yYm"/>
+                    <constraint firstItem="hUo-aN-IES" firstAttribute="leading" secondItem="hXQ-gT-3dU" secondAttribute="trailing" constant="16" id="uhw-SL-kRe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonImage" destination="5Qx-jA-lSZ" id="nby-mZ-PKR"/>
+                <outlet property="musicArtist" destination="1Vm-CH-J0t" id="9I5-79-ghz"/>
+                <outlet property="musicImage" destination="hXQ-gT-3dU" id="uHL-wg-k8h"/>
+                <outlet property="musicTitle" destination="ccd-x7-apa" id="4sX-QD-GXa"/>
+            </connections>
+            <point key="canvasLocation" x="254.34782608695653" y="168.41517857142856"/>
+        </tableViewCell>
+    </objects>
+</document>
